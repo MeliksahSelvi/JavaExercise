@@ -7,6 +7,10 @@ package com.melik.JavaExercise.solid.liskovsubstitution.nonsuitable;
 
 public class Square extends Rectangle{
 
+    public Square() {
+        super();
+    }
+
     public Square(int edge) {
         super(edge, edge);
     }

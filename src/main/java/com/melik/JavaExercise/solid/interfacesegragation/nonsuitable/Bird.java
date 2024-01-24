@@ -18,6 +18,6 @@ public class Bird implements Animal{
 
     @Override
     public void bark() {
-    //do nothing
+        System.out.println(getClass().getSimpleName()+" can't bark");
     }
 }

@@ -8,7 +8,7 @@ package com.melik.JavaExercise.solid.interfacesegragation.nonsuitable;
 public class Dog implements Animal{
     @Override
     public void fly() {
-        //do nothing
+        System.out.println(getClass().getSimpleName()+" can't fly");
     }
 
     @Override

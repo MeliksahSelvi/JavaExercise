@@ -8,7 +8,7 @@ package com.melik.JavaExercise.solid.interfacesegragation.nonsuitable;
 public class Fox implements Animal{
     @Override
     public void fly() {
-        //do nothing
+        System.out.println(getClass().getSimpleName()+" can't fly");
     }
 
     @Override
@@ -18,6 +18,6 @@ public class Fox implements Animal{
 
     @Override
     public void bark() {
-        //do nothing
+        System.out.println(getClass().getSimpleName()+" can't bark");
     }
 }

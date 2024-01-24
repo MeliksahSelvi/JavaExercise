@@ -9,8 +9,7 @@ public class Square implements Shape {
 
     private int edge;
 
-    public Square(int edge) {
-        this.edge = edge;
+    public Square() {
     }
 
     public int getEdge() {

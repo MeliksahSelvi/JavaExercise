@@ -17,14 +17,15 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Rectangle rectangle=new Rectangle(5,8);
+        Rectangle rectangle=new Rectangle();
         rectangle.setWidth(5);
         rectangle.setHeight(8);
 
         System.out.println(rectangle.getArea());
 
 
-        Rectangle rectangleSquare=new Square(5);
+        Rectangle rectangleSquare=new Square();
+        rectangleSquare.setWidth(5);
 
         System.out.println(rectangleSquare.getArea());
     }
