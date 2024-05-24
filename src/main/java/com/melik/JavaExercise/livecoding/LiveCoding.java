@@ -71,4 +71,33 @@ public class LiveCoding {
 
         }
     }
+
+    private static void bestSolution(){
+        String maxGuessName="";
+        String minGuessName="";
+        int maxGuess=Integer.MIN_VALUE;
+        int minGuess=Integer.MAX_VALUE;
+        Map<String ,Integer> userGuesses=new HashMap<>();
+        userGuesses.put("Osman", 20);
+        userGuesses.put("Zeynep", 15);
+        userGuesses.put("Ayşe", 10);
+        userGuesses.put("Kerem", 16);
+        userGuesses.put("Mehmet", 100);
+        userGuesses.put("Veli", 0);
+
+        for (Map.Entry<String, Integer> entry : userGuesses.entrySet()) {
+            if (entry.getValue() > maxGuess) {
+                maxGuess=entry.getValue();
+                maxGuessName=entry.getKey();
+            }
+
+            if (entry.getValue() < minGuess) {
+                minGuess=entry.getValue();
+                minGuessName=entry.getKey();
+            }
+        }
+
+        System.out.println(maxGuessName);
+        System.out.println(minGuessName);
+    }
 }
