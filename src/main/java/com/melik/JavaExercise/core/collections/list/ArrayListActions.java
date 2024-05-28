@@ -1,15 +1,13 @@
 package com.melik.JavaExercise.core.collections.list;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * @Author mselvi
  * @Created 28.05.2024
  */
 
-public class ArrayListExample {
+public class ArrayListActions {
 
     public static void main(String[] args) {
 
