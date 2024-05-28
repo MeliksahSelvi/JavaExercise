@@ -1,4 +1,4 @@
-package com.melik.JavaExercise.livecoding;
+package com.melik.JavaExercise.coding.livecoding;
 
 import java.util.HashMap;
 import java.util.Map;

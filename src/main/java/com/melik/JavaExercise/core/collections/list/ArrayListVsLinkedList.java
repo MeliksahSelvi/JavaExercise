@@ -2,7 +2,6 @@ package com.melik.JavaExercise.core.collections.list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @Author mselvi
@@ -13,7 +12,7 @@ public class ArrayListVsLinkedList {
 
     public static void main(String[] args) {
 
-        List<Integer> list=new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
 
         /*
          * The big-o notation of element addition is O(1) or O(N)
@@ -24,13 +23,13 @@ public class ArrayListVsLinkedList {
         list.add(2);
 
         /*
-        * The big-o notation of element search is O(1).
-        * Because we don't need to iterate all list
-        * */
+         * The big-o notation of element search is O(1).
+         * Because we don't need to iterate all list
+         * */
         list.contains(1);
         list.indexOf(2);
 
-        List<Integer> linkedList=new LinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
 
         /*
          * The big-o notation of element addition is O(1)

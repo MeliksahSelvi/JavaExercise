@@ -19,13 +19,12 @@ public class ArrayListExample {
         /*
         * Burada list yapısını sadece first yapısındaki elemanları içerecek şekilde filtreledik.
         * */
-        List<Integer> first = new ArrayList<>();
+        ArrayList<Integer> first = new ArrayList<>();
         first.add(1);
         first.add(2);
         first.add(3);
         first.add(4);
-
-        List<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(4);
         list.add(8);
