@@ -11,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ThreadSafeCollections {
     public static void main(String[] args) {
         Map<String,String> concurrentHashMap=new ConcurrentHashMap<>();
+        Stack<String> stack=new Stack<>();
         List<Object> synchronizedList = Collections.synchronizedList(new ArrayList<>());
         Map<Object, Object> synchronizedMap = Collections.synchronizedMap(new HashMap<>());
         Set<Object> synchronizedSet = Collections.synchronizedSet(new HashSet<>());
