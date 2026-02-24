@@ -1,8 +1,6 @@
 package com.melik.JavaExercise.tdd;
 
-import com.melik.JavaExercise.tdd.deneme.Money;
-import com.melik.JavaExercise.tdd.deneme.Order;
-import com.melik.JavaExercise.tdd.deneme.ShippingService;
+import com.melik.JavaExercise.tdd.deneme.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,12 +55,12 @@ class ShippingServiceTest {
     @Test
     public void testShippingCostShouldThrowExceptionWhenCostLowerThanZero() {
         var order = new Order(new Money("-1"), 5.0, false, 10.0);
-        assertThrows(IllegalArgumentException.class, () -> shippingService.calculateShippingCost(order));
+        assertThrows(TotalAmountCouldNotNegative.class, () -> shippingService.calculateShippingCost(order));
     }
 
     @Test
     public void testShippingCostShouldThrowExceptionWhenWeightLowerThanZero() {
         var order = new Order(new Money("100"), -1.0, false, 9.0);
-        assertThrows(IllegalArgumentException.class, () -> shippingService.calculateShippingCost(order));
+        assertThrows(OrderWeightCouldNotNegative.class, () -> shippingService.calculateShippingCost(order));
     }
 }
