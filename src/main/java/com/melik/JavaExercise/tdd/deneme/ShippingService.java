@@ -11,18 +11,26 @@ public class ShippingService {
     private static final Money FREE_AMOUNT_THRESHOLD = new Money("1000");
 
     public Money calculateShippingCost(Order order) {
-        if (order.totalAmount().isLowerThanZero()) {
-            throw new IllegalArgumentException();
-        }
-
-        if (order.weight() < 0.0) {
-            throw new IllegalArgumentException();
-        }
+        validateOrder(order);
 
         if (order.totalAmount().greaterOrEqual(FREE_AMOUNT_THRESHOLD)) {
             return new Money("0");
         }
 
+        return calculateCostByOrder(order);
+    }
+
+    private void validateOrder(Order order) {
+        if (order.totalAmount().isLowerThanZero()) {
+            throw new TotalAmountCouldNotNegative("Total amount could not be negative");
+        }
+
+        if (order.weight() < 0.0) {
+            throw new OrderWeightCouldNotNegative("Order weight could not be negative");
+        }
+    }
+
+    private Money calculateCostByOrder(Order order) {
         Money cost = BASE_COST;
         if (order.weight() > FREE_WEIGHT_THRESHOLD) {
             var weightDiff = new Money(order.weight() - FREE_WEIGHT_THRESHOLD);
@@ -36,7 +44,6 @@ public class ShippingService {
         if (order.isPremiumUser()) {
             cost = cost.subtract(cost.multiply(PREMIUM_DISCOUNT_MULTIPLIER));
         }
-
         return cost;
     }
 }
