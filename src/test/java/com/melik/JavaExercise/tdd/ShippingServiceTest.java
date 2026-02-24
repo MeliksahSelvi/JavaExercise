@@ -1,9 +1,9 @@
 package com.melik.JavaExercise.tdd;
 
+import com.melik.JavaExercise.tdd.deneme.Money;
+import com.melik.JavaExercise.tdd.deneme.Order;
+import com.melik.JavaExercise.tdd.deneme.ShippingService;
 import org.junit.jupiter.api.Test;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

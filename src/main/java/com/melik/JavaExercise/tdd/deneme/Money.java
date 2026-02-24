@@ -1,4 +1,4 @@
-package com.melik.JavaExercise.tdd;
+package com.melik.JavaExercise.tdd.deneme;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

@@ -1,6 +1,4 @@
-package com.melik.JavaExercise.tdd;
-
-import java.math.BigDecimal;
+package com.melik.JavaExercise.tdd.deneme;
 
 public class ShippingService {
 
